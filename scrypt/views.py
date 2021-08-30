@@ -47,7 +47,8 @@ def push_to_repo(request, id):
             pull_branch(project.source_url, 
                         project.source_workbench)
             push_branch(project.destination_url,
-                        project.destination_workbench)
+                        project.destination_workbench,
+                        project.id)
                         
             form = PushForm(request.POST)
     else:
