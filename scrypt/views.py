@@ -45,7 +45,8 @@ def push_to_repo(request, id):
         if requests.codes.OK:
 
             pull_branch(project.source_url, 
-                        project.source_workbench)
+                        project.source_workbench,
+                        project.id)
             push_branch(project.destination_url,
                         project.destination_workbench,
                         project.id)
